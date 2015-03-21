@@ -18,9 +18,9 @@ module.exports = function(filepath, app, passport) {
   });
 
   app.get('/auth/github/callback', 
-          passport.authenticate('github', { failureRedirect: '/' }),
-          function(req, res) {
-            res.redirect('/');
+    passport.authenticate('github', { failureRedirect: '/' }),
+    function(req, res) {
+      res.redirect('/');
   });
 
   app.get('/logout', function(req, res){
